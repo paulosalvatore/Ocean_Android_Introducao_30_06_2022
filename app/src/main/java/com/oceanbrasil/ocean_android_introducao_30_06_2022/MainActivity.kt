@@ -1,5 +1,6 @@
 package com.oceanbrasil.ocean_android_introducao_30_06_2022
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -35,6 +36,16 @@ class MainActivity : AppCompatActivity() {
             } else {
                 tvResultado.text = nomeDigitado
             }
+        }
+
+        // Abrir Nova Tela
+
+        val btAbrirNovaTela = findViewById<Button>(R.id.btAbrirNovaTela)
+
+        btAbrirNovaTela.setOnClickListener {
+            val novaTelaIntent = Intent(this, ResultadoActivity::class.java)
+
+            startActivity(novaTelaIntent)
         }
     }
 }
