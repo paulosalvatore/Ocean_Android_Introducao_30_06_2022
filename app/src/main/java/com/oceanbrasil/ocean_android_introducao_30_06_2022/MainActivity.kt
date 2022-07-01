@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             val nomeDigitado = etNome.text
 
             if (nomeDigitado.isBlank()) {
-                etNome.error = "Digite um nome válido!"
+                etNome.error = getString(R.string.type_a_valid_name)
             } else {
                 tvResultado.text = nomeDigitado
             }
