@@ -45,6 +45,10 @@ class MainActivity : AppCompatActivity() {
         btAbrirNovaTela.setOnClickListener {
             val novaTelaIntent = Intent(this, ResultadoActivity::class.java)
 
+            // Adiciona o nome digitado à intent que foi criada
+            val nomeDigitado = etNome.text.toString()
+            novaTelaIntent.putExtra("NOME_DIGITADO", nomeDigitado)
+
             startActivity(novaTelaIntent)
         }
     }
